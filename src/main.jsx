@@ -15,7 +15,13 @@ root.render(
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/index.html" element={<Home />} />
+          <Route path="/index.html" element={<Home />} />
+          <Route path="/about-us.html" element={<Home />} />
+          <Route path="/team.html" element={<Home />} />
+          <Route path="/services.html" element={<Home />} />
+          <Route path="/projects.html" element={<Home />} />
+          <Route path="/blogs.html" element={<Home />} />
+          <Route path="/contact.html" element={<Home />} />
         </Route>
     </Routes>
 </Router>

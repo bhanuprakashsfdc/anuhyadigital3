@@ -1,64 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const BlogPosts = () => {
-  const blogPosts = [
-    {
-      img: "assets/images/img/blog1.png",
-      date: "14 sep",
-      author: "Jacob Jones",
-      comments: "09 Comments",
-      title: "It is a long established fact that a reader",
-      description: "Our dedicated team of experts is here to guide you through every step of the.",
-      link: "blog-details.html",
-    },
-    {
-        img: "assets/images/img/blog1.png",
-        date: "14 sep",
-        author: "Jacob Jones",
-        comments: "09 Comments",
-        title: "It is a long established fact that a reader",
-        description: "Our dedicated team of experts is here to guide you through every step of the.",
-        link: "blog-details.html",
-      },
-      {
-        img: "assets/images/img/blog1.png",
-        date: "14 sep",
-        author: "Jacob Jones",
-        comments: "09 Comments",
-        title: "It is a long established fact that a reader",
-        description: "Our dedicated team of experts is here to guide you through every step of the.",
-        link: "blog-details.html",
-      },
-      {
-        img: "assets/images/img/blog1.png",
-        date: "14 sep",
-        author: "Jacob Jones",
-        comments: "09 Comments",
-        title: "It is a long established fact that a reader",
-        description: "Our dedicated team of experts is here to guide you through every step of the.",
-        link: "blog-details.html",
-      },
-      {
-        img: "assets/images/img/blog1.png",
-        date: "14 sep",
-        author: "Jacob Jones",
-        comments: "09 Comments",
-        title: "It is a long established fact that a reader",
-        description: "Our dedicated team of experts is here to guide you through every step of the.",
-        link: "blog-details.html",
-      },
-      {
-        img: "assets/images/img/blog1.png",
-        date: "14 sep",
-        author: "Jacob Jones",
-        comments: "09 Comments",
-        title: "It is a long established fact that a reader",
-        description: "Our dedicated team of experts is here to guide you through every step of the.",
-        link: "blog-details.html",
-      },
-    // Add more blog posts as needed
-  ];
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/blogpost.json')
+      .then(response => response.json())
+      .then(data => setBlogPosts(data))
+      .catch(error => console.error('Error fetching blog posts:', error));
+  }, []);
 
   return (
     <section className="blog_section">

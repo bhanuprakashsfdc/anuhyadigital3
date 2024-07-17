@@ -1,4 +1,5 @@
 import React from 'react';
+import footerbannerval from '../../public/assets/images/img/Footer/footerbannerval.png'
 
 const FooterBanner = () => {
   return (
@@ -15,7 +16,7 @@ const FooterBanner = () => {
                 <a href="#" className="common_btn">GET A QUOTE <i className="ensurx-arrow-right"></i></a>
               </div>
               <div className="call_action_right">
-                <img src="assets/images/img/call-to-action.png" className="img-fluid" alt="" />
+                <img src={footerbannerval} className="img-fluid" alt="" />
               </div>
               <div className="call_action_shadow">
                 <img src="assets/images/bg/call-to-action-shadow.png" className="img-fluid" alt="" />

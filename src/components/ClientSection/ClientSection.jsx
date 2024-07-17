@@ -1,5 +1,8 @@
 import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
+import Slider from 'react-slick';
+import './ClientSection.css'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const ClientSection = () => {
   const clients = [
@@ -12,18 +15,51 @@ const ClientSection = () => {
     "assets/images/logo/client7.svg"
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className="client_section">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <OwlCarousel className="owl-theme client_carousel" loop margin={10} nav items={5} autoplay>
+            <Slider {...settings} className="client_carousel">
               {clients.map((client, index) => (
                 <div key={index} className="client_item">
                   <img src={client} className="img-fluid" alt={`client-${index + 1}`} />
                 </div>
               ))}
-            </OwlCarousel>
+            </Slider>
           </div>
         </div>
       </div>

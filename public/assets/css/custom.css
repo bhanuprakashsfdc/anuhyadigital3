@@ -21,6 +21,27 @@
 .owl-item{
     width: 200px !important;
 }
+.textfooe p, .textfooe h3, .textfooe ul, .textfooe li, .textfooe a {
+    
+}
+
+.contact_info li {
+  list-style: none; /* Hides the bullet points */
+  padding: 0; /* Removes default padding */
+}
+
+.sizeic{
+    position: relative;
+    top: 5vh;
+    width: 20%;
+}
+
+.sizeics{
+    width: 50%;
+}
+.working_item{
+    height: 400px;
+}
 /* -- Media Queries -- */
 @media (max-width:1200px) {
 

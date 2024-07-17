@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/logo/adlogo.png';
+import { WEBSITE_PHONE, WEBSITE_LOCATION, WEBSITE_EMAILTag,WEBSITE_PHONETag } from '../constants/constants';
 
 const Header = () => {
   return (
@@ -18,31 +19,35 @@ const Header = () => {
               <div className="header_info_wrapper">
                 <div className="header_info">
                   <div className="icon">
-                    <i className="ensurx-mail"></i>
+                   <a href={ WEBSITE_EMAILTag }> 
+                     <i className="ensurx-mail"></i>
+                   </a>
                   </div>
                   <div className="content">
                     <h3>Share a thought.</h3>
-                    <a href="mailto:example@info.com">hi@anuhyadigital.com</a>
+                    <a href={ WEBSITE_EMAILTag } >hi@anuhyadigital.com</a>
                   </div>
                 </div>
                 <div className="header_info info_divider">
                   <div className="icon">
-                    <i className="ensurx-location"></i>
+                   <a href= {WEBSITE_LOCATION }> <i className="ensurx-location"></i> </a>
                   </div>
                   <div className="content">
                     <h3>Make an office trip.</h3>
-                    <a href="#">Flat no 401, Sri Pradha Hills,<br/> Mangalam, Tirupati</a>
+                    <a href={WEBSITE_LOCATION }>Flat no 401, Sri Pradha Hills,<br/> Mangalam, Tirupati</a>
                   </div>
                   <span className="divider_big"></span>
                   <span className="divider_small"></span>
                 </div>
                 <div className="header_info info_divider">
                   <div className="icon">
+                   <a href={ WEBSITE_PHONETag }>
                     <i className="ensurx-call"></i>
+                   </a> 
                   </div>
                   <div className="content">
                     <h3>Requesting A Call</h3>
-                    <a href="tel:08861789164">+91-8861789164</a>
+                    <a href={ WEBSITE_PHONETag }>{ WEBSITE_PHONE }</a>
                   </div>
                   <span className="divider_small_2"></span>
                   <span className="divider_big_2"></span>
@@ -88,7 +93,7 @@ const Header = () => {
                   <a href="#" className="search-submit"><i className="ensurx-search"></i></a>
                 </div>
                 {/* <button className="btn" type="submit"><i className="ensurx-cart"></i></button> */}
-                <a href="#" className="common_btn">Get A Quote<i className="ensurx-arrow-right"></i></a>
+                <a href= { WEBSITE_PHONETag} className="common_btn">Get A Quote<i className="ensurx-arrow-right"></i></a>
               </form>
             </div>
           </div>

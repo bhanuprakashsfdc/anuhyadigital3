@@ -1,4 +1,5 @@
 import React from 'react';
+import { WEBSITE_EMAILTag, WEBSITE_PHONETag } from '../constants/constants';
 
 const Hero = () => {
   return (
@@ -26,8 +27,8 @@ const Hero = () => {
                     </p>
                   </div>
                   <div className="learn_more_button d-flex">
-                    <a href="#" className="common_btn">Learn More</a>
-                    <a href="#" className="common_btn white_button">Get Started</a>
+                    <a href= { WEBSITE_PHONETag} className="common_btn">Call us</a>
+                    <a href= { WEBSITE_EMAILTag} className="common_btn white_button">Drop a Mail</a>
                   </div>
                 </div>
               </div>

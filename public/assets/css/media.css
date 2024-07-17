@@ -471,7 +471,7 @@
         left: -25px;
     }
     .promo_item {
-        height: 220px;
+        height: 350px !important;
     }
     .promo_item h4 {
         font-size: 20px;

@@ -6,10 +6,10 @@ import Header from './components/Header'
 import AboutSection from './components/AboutSection'
 import Services from './components/Services'
 import ProjectSection from './components/ProjectSection'
-import TeamSection from './components/TeamSection'
+import TeamSection from './components/TeamSection/TeamSection'
 import WorkingProcessSection from './components/WorkingProcessSection'
-import ClientSection from './components/ClientSection'
-import TestimonialsSection from './components/TestimonialsSection'
+import ClientSection from './components/ClientSection/ClientSection'
+import TestimonialsSection from './components/TestimonialsSection/TestimonialsSection'
 import BlogPosts from './components/BlogPosts'
 
 function App() {

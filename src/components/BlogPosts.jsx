@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogPosts = () => {
   const blogPosts = [
@@ -12,6 +13,24 @@ const BlogPosts = () => {
       link: "blog-details.html",
     },
     {
+        img: "assets/images/img/blog1.png",
+        date: "14 sep",
+        author: "Jacob Jones",
+        comments: "09 Comments",
+        title: "It is a long established fact that a reader",
+        description: "Our dedicated team of experts is here to guide you through every step of the.",
+        link: "blog-details.html",
+      },
+      {
+        img: "assets/images/img/blog1.png",
+        date: "14 sep",
+        author: "Jacob Jones",
+        comments: "09 Comments",
+        title: "It is a long established fact that a reader",
+        description: "Our dedicated team of experts is here to guide you through every step of the.",
+        link: "blog-details.html",
+      },
+      {
         img: "assets/images/img/blog1.png",
         date: "14 sep",
         author: "Jacob Jones",

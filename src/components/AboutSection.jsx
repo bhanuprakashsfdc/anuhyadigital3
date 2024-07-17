@@ -1,4 +1,5 @@
 import React from 'react';
+import { WEBSITE_NAME } from '../constants/constants';
 
 const AboutSection = () => {
   return (
@@ -37,12 +38,12 @@ const AboutSection = () => {
 
               <div className="common_heading">
                 <div className="title_style">
-                  <span></span><h3>About Anuhya Digital</h3>
+                  <span></span><h3>About { WEBSITE_NAME }</h3>
                 </div>
                 <h2>Delivering Excellence in <br /><span>Software Consulting Services</span></h2>
               </div>
               
-              <p>At Anuhya Digital, we specialize in Salesforce consulting, web development, SEO, and SMM services. Our expert team ensures that your business achieves its goals with tailored solutions and dedicated support.</p>
+              <p>At { WEBSITE_NAME }, we specialize in Salesforce consulting, web development, SEO, and SMM services. Our expert team ensures that your business achieves its goals with tailored solutions and dedicated support.</p>
 
               <div className="list_group">
                 <ul className="p-0">

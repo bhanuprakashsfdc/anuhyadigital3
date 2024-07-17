@@ -1,0 +1,28 @@
+.client_section {
+    padding: 40px 10%;
+  }
+  
+  .client_item {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .client_item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    color: black;
+  }
+  
+  @media (max-width: 600px) {
+    .client_section {
+      padding: 40px 5%;
+    }
+  }
+  

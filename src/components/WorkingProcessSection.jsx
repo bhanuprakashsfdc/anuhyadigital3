@@ -1,39 +1,49 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faClipboardList,
+  faChartLine,
+  faDraftingCompass,
+  faCode,
+  faCheckCircle,
+  faCloudUploadAlt,
+  faLifeRing
+} from '@fortawesome/free-solid-svg-icons';
 
 const WorkingProcessSection = () => {
   const steps = [
     {
-      iconSrc: "assets/images/icon/working-icon1.svg",
+      icon: faClipboardList,
       title: "Requirement Gathering",
       description: "Collaborate closely with clients to understand and document their project needs and objectives.",
     },
     {
-      iconSrc: "assets/images/icon/working-icon2.svg",
+      icon: faChartLine,
       title: "Planning & Analysis",
       description: "Analyze client requirements to create a detailed project plan and define the project scope.",
     },
     {
-      iconSrc: "assets/images/icon/working-icon3.svg",
+      icon: faDraftingCompass,
       title: "Design & Prototyping",
       description: "Develop design mockups and prototypes to visualize the solution and ensure alignment with client expectations.",
     },
     {
-      iconSrc: "assets/images/icon/working-icon4.svg",
+      icon: faCode,
       title: "Development",
       description: "Execute the project plan by coding and integrating various components of the solution.",
     },
     {
-      iconSrc: "assets/images/icon/working-icon5.svg",
+      icon: faCheckCircle,
       title: "Testing & QA",
       description: "Conduct rigorous testing and quality assurance to ensure the solution is bug-free and meets all requirements.",
     },
     {
-      iconSrc: "assets/images/icon/working-icon6.svg",
+      icon: faCloudUploadAlt,
       title: "Deployment",
       description: "Deploy the solution to the production environment and ensure a smooth launch.",
     },
     {
-      iconSrc: "assets/images/icon/working-icon7.svg",
+      icon: faLifeRing,
       title: "Support & Maintenance",
       description: "Provide ongoing support and maintenance to ensure the solution continues to meet client needs.",
     }
@@ -53,17 +63,12 @@ const WorkingProcessSection = () => {
           </div>
         </div>
         <div className="working_process_wrapper">
-         {/* 
-          <div className="working_line">
-            <img src="assets/images/bg/working-line.png" className="img-fluid" alt="Working Line" />
-          </div>
-          */}
           <div className="row justify-content-between">
             {steps.map((step, index) => (
               <div key={index} className={`col-md-3 text-center bxview ${index === 1 ? 'z-0' : ''} ${index === 2 ? 'z-1' : ''}`}>
                 <div className="working_item">
                   <div className="working_icon">
-                    <img src={step.iconSrc} className="img-fluid" alt={step.title} />
+                    <FontAwesomeIcon icon={step.icon} size="3x" className="img-fluid sizeics" alt={step.title} />
                   </div>
                   <h4>{step.title}</h4>
                   <p>{step.description}</p>

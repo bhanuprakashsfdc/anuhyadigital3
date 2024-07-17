@@ -1,5 +1,8 @@
 import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
+import './TeamSection.css'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -49,9 +52,42 @@ const TeamSection = () => {
     }
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className="team_section">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
             <div className="team_main">
@@ -64,7 +100,7 @@ const TeamSection = () => {
                 </div>
                 <h2>Let's Introduce Our Expert<br /><span>Team Members</span></h2>
               </div>
-              <OwlCarousel className="team_carousel owl-carousel" items={3} margin={30} autoplay>
+              <Slider {...settings} className="team_carousel">
                 {teamMembers.map((member, index) => (
                   <div key={index} className="team_member">
                     <img src={member.imgSrc} className="img-fluid" alt={member.name} />
@@ -87,7 +123,7 @@ const TeamSection = () => {
                     </div>
                   </div>
                 ))}
-              </OwlCarousel>
+              </Slider>
             </div>
           </div>
         </div>

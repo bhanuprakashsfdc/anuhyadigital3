@@ -7,7 +7,7 @@ const PromoSection = () => {
         <div className="row gx-0">
           <div className="col-lg-4">
             <div className="promo_item">
-              <h4>500+ Successful Projects</h4>
+              <h4>30+ Successful Projects</h4>
               <div className="icon_group">
                 <img src="assets/images/icon/promo-1.svg" className="img-fluid" alt="promo-1" />
                 <p>Our dedicated team ensures the success of your projects with expertise in Salesforce, web development, SEO, and SMM.</p>
@@ -16,7 +16,7 @@ const PromoSection = () => {
           </div>
           <div className="col-lg-4">
             <div className="promo_item p_item_2">
-              <h4>80+ Expert Consultants</h4>
+              <h4>12+ Expert Consultants</h4>
               <div className="icon_group">
                 <img src="assets/images/icon/promo-2.svg" className="img-fluid" alt="promo-2" />
                 <p>Our team of expert consultants provides top-notch Salesforce and digital marketing solutions tailored to your needs.</p>

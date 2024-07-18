@@ -44,9 +44,9 @@ const Footer = () => {
                   <h3>More</h3> <span></span>
                 </div>
                 <ul>
-                  <li><a href="about-us.html">Contact Us</a></li>
-                  <li><a href="team.html">Terms And Conditions</a></li>
-                  <li><a href="blogs.html">Privacy Policy</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="terms-condtions.html">Terms And Conditions</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 </ul>
               </div>
             </div>

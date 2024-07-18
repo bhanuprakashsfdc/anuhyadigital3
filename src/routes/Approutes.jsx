@@ -8,6 +8,8 @@ import ServicePage from '../pages/ServicePage.jsx';
 import ProjectPage from '../pages/ProjectPage.jsx';
 import BlogPage from '../pages/BlogPage.jsx';
 import ContactPage from '../pages/ContactPage.jsx';
+import PrivacyPolicyPage from '../pages/PrivacyPolicyPage.jsx';
+import TermsConditionsPage from '../pages/TermsConditionsPage.jsx';
 
 const AppRoutes = () => {
   return (
@@ -21,6 +23,8 @@ const AppRoutes = () => {
         <Route path="/projects.html" element={<ProjectPage />} />
         <Route path="/blogs.html" element={<BlogPage />} />
         <Route path="/contact.html" element={<ContactPage />} />
+        <Route path="/privacy-policy.html" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-condtions.html" element={<TermsConditionsPage />} />
       </Route>
     </Routes>
   );

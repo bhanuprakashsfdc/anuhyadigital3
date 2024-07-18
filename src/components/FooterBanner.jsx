@@ -1,4 +1,5 @@
 import React from 'react';
+import { WEBSITE_PHONETag } from '../constants/constants';
 import footerbannerval from '../../public/assets/images/img/Footer/footerbannerval.png'
 
 const FooterBanner = () => {
@@ -13,7 +14,7 @@ const FooterBanner = () => {
                 <p>
                   Our dedicated team of experts is here to guide you through every <br /> step of your digital transformation journey, ensuring you succeed.
                 </p>
-                <a href="#" className="common_btn">GET A QUOTE <i className="ensurx-arrow-right"></i></a>
+                <a href={ WEBSITE_PHONETag } className="common_btn">Call Us <i className="ensurx-arrow-right"></i></a>
               </div>
               <div className="call_action_right">
                 <img src={footerbannerval} className="img-fluid" alt="" />

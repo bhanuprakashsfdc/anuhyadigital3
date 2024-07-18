@@ -1,5 +1,5 @@
 import React from 'react';
-import { WEBSITE_NAME, WEBSITE_ADDRESS, WEBSITE_PHONE, WEBSITE_EMAIL,WEBSITE_LOCATION, WEBSITE_PHONETag, WEBSITE_EMAILTag } from '../constants/constants';
+import { WEBSITE_NAME, WEBSITE_ADDRESS, WEBSITE_PHONE, WEBSITE_EMAIL, WEBSITE_LOCATION, WEBSITE_PHONETag, WEBSITE_EMAILTag, WEBSITE_FB, WEBSITE_Insta, WEBSITE_Linkedin, WEBSITE_X } from '../constants/constants';
 import Minifooter from './Minifooter';
 import FooterBanner from './FooterBanner';
 
@@ -18,10 +18,10 @@ const Footer = () => {
                   Welcome to { WEBSITE_NAME }, where your digital transformation is our priority. As a leading player in software consulting, we provide top-notch Salesforce consulting, web development, SEO, and SMM services.
                 </p>
                 <ul>
-                  <li><a href="#"><i className="ensurx-facebook-solid"></i></a></li>
-                  <li><a href="#"><i className="ensurx-x-twitter"></i></a></li>
-                  <li><a href="#"><i className="ensurx-linkedin-solid"></i></a></li>
-                  <li><a href="#"><i className="ensurx-instagram"></i></a></li>
+                  <li><a href= { WEBSITE_FB} ><i className="ensurx-facebook-solid"></i></a></li>
+                  <li><a href= { WEBSITE_X} ><i className="ensurx-x-twitter"></i></a></li>
+                  <li><a href= { WEBSITE_Linkedin} ><i className="ensurx-linkedin-solid"></i></a></li>
+                  <li><a href= { WEBSITE_Insta} ><i className="ensurx-instagram"></i></a></li>
                 </ul>
               </div>
             </div>

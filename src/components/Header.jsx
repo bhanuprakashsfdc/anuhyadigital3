@@ -10,7 +10,7 @@ const Header = () => {
           <div className="row">
             <div className="col-md-3">
               <div className="main_logo">
-                <a href="#">
+                <a href="/">
                   <img src={logo} className="img-fluid" alt="logo" />
                 </a>
               </div>
@@ -60,7 +60,7 @@ const Header = () => {
       <div className="main_header">
         <nav className="navbar navbar-expand-lg">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <img src={logo} className="img-fluid" alt="" />
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

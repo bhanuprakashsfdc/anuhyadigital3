@@ -6,13 +6,15 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const ClientSection = () => {
   const clients = [
-    "assets/images/logo/client1.svg",
-    "assets/images/logo/client2.svg",
-    "assets/images/logo/client3.svg",
-    "assets/images/logo/client4.svg",
-    "assets/images/logo/client5.svg",
-    "assets/images/logo/client6.svg",
-    "assets/images/logo/client7.svg"
+    "../../assets/images/clients/ajanu.png",
+    "../../assets/images/clients/aarun.png",
+    "../../assets/images/clients/asfdemo.png",
+    "../../assets/images/clients/ags7.png",
+    "../../assets/images/clients/ajb.png",
+    "../../assets/images/clients/ajk.png",
+    "../../assets/images/clients/asgic.png",
+    "../../assets/images/clients/adisricargo.png",
+    "../../assets/images/clients/srichad.png"
   ];
 
   const settings = {

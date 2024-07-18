@@ -1,7 +1,7 @@
 // src/components/ContactSection.jsx
 import React from 'react';
 import './ContactSection.css'
-import { WEBSITE_NAME, WEBSITE_ADDRESS, WEBSITE_PHONE, WEBSITE_EMAIL } from '../../constants/constants';
+import { WEBSITE_NAME, WEBSITE_ADDRESS, WEBSITE_PHONE, WEBSITE_PHONETag, WEBSITE_EMAIL, WEBSITE_EMAILTag, WEBSITE_LOCATION } from '../../constants/constants';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import WebToLeadForm from '../WebToLeadForm/WebToLeadForm';
 
@@ -23,14 +23,16 @@ const ContactSection = () => {
               <div className="contact_info">
                 <ul className="p-0">
                   <li>
-                    <FaPhone className="icon" /> { WEBSITE_PHONE }
+                    <FaPhone className="icon" /> <a href={WEBSITE_PHONETag}>{ WEBSITE_PHONE } </a>
                   </li>
                   <li>
-                    <FaEnvelope className="icon" /> { WEBSITE_EMAIL }
+                    <FaEnvelope className="icon" /> <a href={WEBSITE_EMAILTag}> { WEBSITE_EMAIL } </a> 
                   </li>
                   <li>
                     <FaMapMarkerAlt className="icon" /> 
-                    <span dangerouslySetInnerHTML={{ __html: WEBSITE_ADDRESS }} />
+                    <a href={WEBSITE_LOCATION}> <span dangerouslySetInnerHTML={{ __html: WEBSITE_ADDRESS }} />
+                    </a>
+                    
                   </li>
                 </ul>
               </div>

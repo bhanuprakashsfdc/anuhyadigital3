@@ -10,7 +10,7 @@ import TeamSection from './components/TeamSection/TeamSection'
 import WorkingProcessSection from './components/WorkingProcessSection'
 import ClientSection from './components/ClientSection/ClientSection'
 import TestimonialsSection from './components/TestimonialsSection/TestimonialsSection'
-import BlogPosts from './components/BlogPosts'
+import Blogs from './components/Blogs'
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <WorkingProcessSection />
       <ClientSection />
       <TestimonialsSection />
-      <BlogPosts />
+      <Blogs />
     </>
   )
 }

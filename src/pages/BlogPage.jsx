@@ -1,10 +1,12 @@
 import React from 'react'
 import BlogPosts from '../components/BlogPosts'
+import Blogs from '../components/Blogs'
 
 const BlogPage = () => {
   return (
     <div>
-      <BlogPosts />
+     {/* <BlogPosts /> */} 
+      <Blogs />
     </div>
   )
 }

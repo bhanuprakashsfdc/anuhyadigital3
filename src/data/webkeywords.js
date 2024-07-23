@@ -1,6 +1,4 @@
-{
-    "header": "Web Design",
-    "content": [
+const keywords = [
         "web designing company",
         "best web designing company",
         "top web designing companies",
@@ -136,5 +134,7 @@
         "Innovative web designers",
         "Creative website designers",
         "Local web design experts"
-    ]
-}
+  ];
+  
+  export default keywords;
+  

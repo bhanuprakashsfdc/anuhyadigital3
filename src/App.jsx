@@ -11,11 +11,24 @@ import WorkingProcessSection from './components/WorkingProcessSection'
 import ClientSection from './components/ClientSection/ClientSection'
 import TestimonialsSection from './components/TestimonialsSection/TestimonialsSection'
 import Blogs from './components/Blogs'
+import { WEBSITE_EMAILTag, WEBSITE_PHONETag } from './constants/constants'
 
 function App() {
+  const shapeImages = [
+    { src: 'assets/images/bg/Shape1.png' },
+    { src: 'assets/images/bg/Shape2.png' },
+    { src: 'assets/images/bg/Shape3.png' },
+  ];
   return (
     <>
-      <Hero />
+      <Hero 
+        heading="Transform Your Business"
+        subheading="Your Reliable Digital <br /><span>Partner & Guide</span>"
+        description="Our dedicated team of experts is here to guide you through every step of your <br /> digital transformation journey, ensuring you make informed choices."
+        phoneLink={WEBSITE_PHONETag}
+        emailLink={WEBSITE_EMAILTag}
+        shapeImages={shapeImages}
+      />
       <PromoSection />
       <AboutSection />
       <Services />

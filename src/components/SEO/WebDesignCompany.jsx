@@ -10,13 +10,28 @@ import ServicesList from '../ServicesList/ServicesList';
 import Blogs from '../Blogs';
 import VitalIngredients from '../VitalIngredients/VitalIngredients';
 import Technologies from '../Technologies/Technologies';
+import IndustriesWeWorkFor from '../IndustriesWeWorkFor/IndustriesWeWorkFor';
+import CreativeWebDesignFeatures from '../CreativeWebDesignFeatures/CreativeWebDesignFeatures';
+import { WEBSITE_EMAILTag, WEBSITE_PHONETag } from '../../constants/constants'
 
 const WebDesignCompany = ({ city }) => {
+  const shapeImages = [
+    { src: 'assets/images/bg/Shape1.png' },
+    { src: 'assets/images/bg/Shape2.png' },
+    { src: 'assets/images/bg/Shape3.png' },
+  ];
     const formattedCity = city.toLowerCase().replace(/ /g, '-');
     const url = `/web-design-company-${formattedCity}.html`;
     return (
         <div className="city-service">
-          <Hero />
+                <Hero 
+                  heading={`Transform Your Business in ${city}`}
+                  subheading={`Your Reliable Digital <br /><span>Partner & Guide in ${city}</span>`}
+                  description="Our dedicated team of experts is here to guide you through every step of your <br /> digital transformation journey, ensuring you make informed choices."
+                  phoneLink={WEBSITE_PHONETag}
+                  emailLink={WEBSITE_EMAILTag}
+                  shapeImages={shapeImages}
+                />
           <div className="contect common_heading text-center row gy-4">
             
             <h1>Welcome to { WEBSITE_NAME }, the leading web design company in {city}</h1>
@@ -42,6 +57,8 @@ const WebDesignCompany = ({ city }) => {
             <ServicesList city={city} />
             <VitalIngredients city={city}/>
             <Technologies />
+            <IndustriesWeWorkFor />
+            <CreativeWebDesignFeatures />
             <ProjectSection />
             <WorkingProcessSection />
             <ClientSection />

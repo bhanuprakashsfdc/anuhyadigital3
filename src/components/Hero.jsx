@@ -7,7 +7,8 @@ const Hero = ({
   description, 
   phoneLink, 
   emailLink, 
-  shapeImages 
+  shapeImages,
+  alttag 
 }) => {
   return (
     <div className="banner_carousel owl-carousel">
@@ -21,7 +22,7 @@ const Hero = ({
                     key={index} 
                     src={shape.src} 
                     className={`img-fluid shape${index + 1}`} 
-                    alt={`Shape${index + 1}`} 
+                    alt={alttag} 
                   />
                 ))}
               </div>
@@ -30,9 +31,9 @@ const Hero = ({
                   <div className="common_heading text-center">
                     <div className="title_style">
                       <span></span>
-                      <h3>{heading}</h3>
+                      <h3 dangerouslySetInnerHTML={{ __html: heading }}></h3>
                     </div>
-                    <h1 dangerouslySetInnerHTML={{ __html: subheading }}></h1>
+                    <h2 dangerouslySetInnerHTML={{ __html: subheading }}></h2>
                     <p dangerouslySetInnerHTML={{ __html: description }}></p>
                   </div>
                   <div className="learn_more_button d-flex">

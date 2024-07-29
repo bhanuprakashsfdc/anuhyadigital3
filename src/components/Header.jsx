@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/logo/adlogo.png';
-import { WEBSITE_PHONE, WEBSITE_LOCATION, WEBSITE_EMAILTag,WEBSITE_PHONETag } from '../constants/constants';
+import { WEBSITE_PHONE, WEBSITE_LOCATION, WEBSITE_EMAIL, WEBSITE_EMAILTag, WEBSITE_PHONETag } from '../constants/constants';
 
 const Header = () => {
   return (
@@ -25,7 +25,7 @@ const Header = () => {
                   </div>
                   <div className="content">
                     <h3>Share a thought.</h3>
-                    <a href={ WEBSITE_EMAILTag } >hi@anuhyadigital.com</a>
+                    <a href={ WEBSITE_EMAILTag } > { WEBSITE_EMAIL} </a>
                   </div>
                 </div>
                 <div className="header_info info_divider">

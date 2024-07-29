@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const websiteUrl = 'https://www.anuhyadigital.com';
+const maxLines = 10000;
 
 const generateSitemap = () => {
   const pages = [
@@ -33,24 +34,63 @@ const generateSitemap = () => {
   });
 
   const urls = [...pages, ...dynamicPages];
+  const sitemapIndex = [];
 
-  const urlEntries = urls.map(url => `
-    <url>
-      <loc>${url.loc}</loc>
-      <lastmod>${url.lastmod}</lastmod>
-      <changefreq>${url.changefreq}</changefreq>
-      <priority>${url.priority}</priority>
-    </url>
+  let urlEntries = '';
+  let fileCount = 1;
+  let lineCount = 0;
+
+  const writeSitemapFile = (content, count) => {
+    const filename = `sitemap${count}.xml`;
+    const sitemap = `
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        ${content}
+      </urlset>
+    `;
+    fs.writeFileSync(path.join(__dirname, 'public', filename), sitemap.trim());
+    sitemapIndex.push(filename);
+  };
+
+  urls.forEach(url => {
+    const urlEntry = `
+      <url>
+        <loc>${url.loc}</loc>
+        <lastmod>${url.lastmod}</lastmod>
+        <changefreq>${url.changefreq}</changefreq>
+        <priority>${url.priority}</priority>
+      </url>
+    `;
+    urlEntries += urlEntry;
+    lineCount += urlEntry.split('\n').length;
+
+    if (lineCount >= maxLines) {
+      writeSitemapFile(urlEntries, fileCount);
+      fileCount++;
+      urlEntries = '';
+      lineCount = 0;
+    }
+  });
+
+  if (urlEntries) {
+    writeSitemapFile(urlEntries, fileCount);
+  }
+
+  const sitemapIndexContent = sitemapIndex.map(file => `
+    <sitemap>
+      <loc>${websiteUrl}/public/${file}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+    </sitemap>
   `).join('');
 
-  const sitemap = `
+  const sitemapIndexFile = `
     <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${urlEntries}
-    </urlset>
+    <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${sitemapIndexContent}
+    </sitemapindex>
   `;
 
-  fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), sitemap.trim());
+  fs.writeFileSync(path.join(__dirname, 'public', 'sitemap-index.xml'), sitemapIndexFile.trim());
 };
 
 generateSitemap();

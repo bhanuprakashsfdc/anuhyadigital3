@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 import { WEBSITE_NAME, WEBSITE_EMAILTag, WEBSITE_PHONETag, WEBSITE_URL } from '../../../constants/constants';
-import logo from '../../../assets/images/logo/logo.png'
+import logo from '../../../assets/images/logo/OG.png'
 import Hero from '../../Hero';
 import ProjectSection from '../../ProjectSection';
 import WorkingProcessSection from '../../WorkingProcessSection';

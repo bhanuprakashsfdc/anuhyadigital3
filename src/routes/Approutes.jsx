@@ -38,12 +38,14 @@ const AppRoutes = () => {
               {keywords.map(keyword => {
                 const formattedKeyword = keyword.toLowerCase().replace(/ /g, '-');
                 const path = `/${formattedKeyword}-${formattedCity}.html`;
-                {/*  console.log(`Generating route for path: ${path}`); */}
+                const title = `${keyword} ${city} | Anuhya Digital`;
+                const description = `We are providing our Salesforce consulting and implementation services to various Clients. Working through-out APAC, India, US, and other regions. We are also working on product development for Retail Industry based on Salesforce product and have sold this idea to a big Retail Client and working on MVP.`;
+                const keywords = `${keyword} ${city}, web design, web development, ${city}, Anuhya Digital`;
                 return (
                   <Route
                     key={path}
                     path={path}
-                    element={<SEOPage city={city} keyword={keyword} />}
+                    element={<SEOPage city={city} keyword={keyword} title={title} description={description} keywords={keywords}/>}
                   />
                 );
               })}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import './App.css'
 import Hero from './components/Hero'
 import PromoSection from './components/PromoSection'
@@ -14,6 +14,16 @@ import Blogs from './components/Blogs'
 import { WEBSITE_EMAILTag, WEBSITE_PHONETag } from './constants/constants'
 
 function App() {
+  useEffect(() => {
+    const handlePageLoad = () => {
+      console.log('Page has fully loaded');
+    };
+    window.addEventListener('load', handlePageLoad);
+    return () => {
+      window.removeEventListener('load', handlePageLoad);
+    };
+  }, []);
+
   const shapeImages = [
     { src: 'assets/images/bg/Shape1.png' },
     { src: 'assets/images/bg/Shape2.png' },

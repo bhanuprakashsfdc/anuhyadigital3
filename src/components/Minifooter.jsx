@@ -9,7 +9,7 @@ const Minifooter = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <p>© {currentYear}. Created & Maintained by <a href={ WEBSITE_URL } target="_blank" rel="noopener noreferrer"> { WEBSITE_NAME }. </a> All rights reserved.</p>
+          <p>© {currentYear}. Created & Maintained by <span> <a href={ WEBSITE_URL } target="_blank" rel="noopener noreferrer"> { WEBSITE_NAME }. </a> </span> All rights reserved.</p>
         </div>
       </div>
     </div>

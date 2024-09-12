@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Map from '../components/Map';
 import WebDesignKeywords from '../components/SEO/WebDesignKeywords';
 import SalesforceKeywords from '../components/SEO/SalesforceKeywords';
+import ChatWidget from '../components/ChatWidget/ChatWidget';
 
 const Layout = () => {
   return (
@@ -17,6 +18,7 @@ const Layout = () => {
       <SalesforceKeywords />
       <Map />
       <Footer />
+      <ChatWidget />
     </div>
   )
 }

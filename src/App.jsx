@@ -16,7 +16,16 @@ import { WEBSITE_EMAILTag, WEBSITE_PHONETag } from './constants/constants'
 function App() {
   useEffect(() => {
     const handlePageLoad = () => {
-      console.log('Page has fully loaded');
+      // Check if page reload has already happened during this session
+      const hasReloaded = sessionStorage.getItem('hasReloaded');
+      if (!hasReloaded) {
+        // Set flag to true so it only happens once
+        sessionStorage.setItem('hasReloaded', 'true');
+        // Reload the page once
+        window.location.reload();
+      } else {
+        console.log('Page has fully loaded and reload has already happened once.');
+      }
     };
     window.addEventListener('load', handlePageLoad);
     return () => {
